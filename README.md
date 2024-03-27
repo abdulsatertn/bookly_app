@@ -45,6 +45,7 @@ TODO
 ## Packages
 
 - Get
+- font_awesome_flutter
 
 ## Contributing
 
