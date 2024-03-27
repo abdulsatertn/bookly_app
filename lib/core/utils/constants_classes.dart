@@ -17,3 +17,7 @@ class AppSizes {
 class AppStrings {
   static const String splashText = "Read Free Books";
 }
+
+class AppAspectRatio {
+  static const double itemListView = 2.7 / 4;
+}
