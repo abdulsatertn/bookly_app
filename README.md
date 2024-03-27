@@ -42,6 +42,10 @@ Bookly is a Flutter app that allows users to explore a curated list of free book
 
 TODO
 
+## Packages
+
+- Get
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to Bookly, please fork the repository and submit a pull request with your changes.
