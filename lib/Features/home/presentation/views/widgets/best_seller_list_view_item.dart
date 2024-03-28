@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
@@ -28,35 +29,40 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),
           const SizedBox(width: AppSizes.s30),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .5,
-                child: Text(
-                  'Harry Potter and the globet of fire',
-                  maxLines: 2,
-                  style: Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              const SizedBox(height: AppSizes.s3),
-              const Text(
-                'JK .Rowling',
-                maxLines: 1,
-                style: Styles.textStyle14,
-              ),
-              const SizedBox(height: AppSizes.s3),
-              Row(
-                children: [
-                  Text(
-                    '19.99 €',
-                    style: Styles.textStyle20
-                        .copyWith(fontWeight: FontWeight.bold),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: Text(
+                    'Harry Potter and the globet of fire',
+                    maxLines: 2,
+                    style:
+                        Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                ],
-              )
-            ],
+                ),
+                const SizedBox(height: AppSizes.s3),
+                const Text(
+                  'JK .Rowling',
+                  maxLines: 1,
+                  style: Styles.textStyle14,
+                ),
+                const SizedBox(height: AppSizes.s3),
+                Row(
+                  children: [
+                    Text(
+                      '19.99 €',
+                      style: Styles.textStyle20
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    const Spacer(),
+                    const BookRating(),
+                  ],
+                )
+              ],
+            ),
           )
         ],
       ),
