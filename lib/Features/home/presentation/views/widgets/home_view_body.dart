@@ -2,6 +2,7 @@ import 'package:bookly_app/Features/home/presentation/views/widgets/custom_app_b
 import 'package:bookly_app/Features/home/presentation/views/widgets/featured_list_view.dart';
 import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -13,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppPadding.p24),
+      padding: EdgeInsets.symmetric(horizontal: AppPadding.p30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,6 +27,7 @@ class HomeViewBody extends StatelessWidget {
             'Best Seller',
             style: Styles.textStyle18,
           ),
+          SizedBox(height: AppSizes.s20),
           BestSellerListViewItem(),
         ],
       ),
@@ -55,8 +57,19 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(width: AppSizes.s30),
           Column(
-            children: [],
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: const Text(
+                  'Harry Potter and the globet of fire',
+                  maxLines: 2,
+                  style: Styles.textStyle20,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              )
+            ],
           )
         ],
       ),
