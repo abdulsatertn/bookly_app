@@ -46,6 +46,7 @@ TODO
 
 - Get
 - font_awesome_flutter
+- google_fonts
 
 ## Contributing
 
