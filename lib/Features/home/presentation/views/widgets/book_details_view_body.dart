@@ -1,10 +1,7 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/book_rating.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/books_action.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/books_details_section.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/similar_books_list_view.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/similar_books_section.dart';
 import 'package:bookly_app/core/utils/constants_classes.dart';
-import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,53 +11,26 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-
-    return CustomScrollView(
+    return const CustomScrollView(
       // so i can scroll with using expanded sized box
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p30),
+            padding: EdgeInsets.symmetric(horizontal: AppPadding.p30),
             child: Column(
               children: [
-                const CustomBookDetailsAppBar(),
-                const SizedBox(height: AppSizes.s24),
-                Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * .2),
-                    child: const CustomBookImage()),
-                const SizedBox(height: AppSizes.s43),
-                const Text('The Jungle Book', style: Styles.textStyle30),
-                const SizedBox(height: AppSizes.s6),
-                Opacity(
-                  opacity: .7,
-                  child: Text('Rudyard Kipling',
-                      style: Styles.textStyle18.copyWith(
-                          fontStyle: FontStyle.italic,
-                          fontWeight: FontWeight.w500)),
-                ),
-                const SizedBox(height: AppSizes.s18),
-                const BookRating(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ),
-                const SizedBox(height: AppSizes.s37),
-                const BooksAction(),
-                const Expanded(
+                CustomBookDetailsAppBar(),
+                SizedBox(height: AppSizes.s24),
+                BookDetailsSection(),
+
+                Expanded(
                     child: SizedBox(
                         height:
                             40)), // so the list will be always in the bottom of the screen
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'You may also like this',
-                    style: Styles.textStyle16
-                        .copyWith(fontWeight: FontWeight.w700),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                const SimilarBooksListView(),
-                const SizedBox(height: 40),
+
+                SimilarBooksSection(),
+                SizedBox(height: 40),
               ],
             ),
           ),
