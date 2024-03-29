@@ -30,7 +30,10 @@ class BookDetailsViewBody extends StatelessWidget {
                 style: Styles.textStyle18.copyWith(
                     fontStyle: FontStyle.italic, fontWeight: FontWeight.w500)),
           ),
-          BookRating(),
+          const SizedBox(height: AppSizes.s18),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
         ],
       ),
     );
