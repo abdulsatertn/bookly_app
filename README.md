@@ -1,3 +1,5 @@
+[![Language](https://img.shields.io/badge/language-Dart-blue.svg)](https://dart.dev/)
+
 # Bookly
 
 Bookly is a Flutter app that allows users to explore a curated list of free books sourced from the Google Books API. Users can browse the available books and select any book to preview its content.
