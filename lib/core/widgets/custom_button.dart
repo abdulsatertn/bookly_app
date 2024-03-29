@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
             ),
           ),
           child: Text(
-            '19.99 \$',
+            text,
             style: Styles.textStyle18.copyWith(
                 color: textColor,
                 fontWeight: FontWeight.w900,
