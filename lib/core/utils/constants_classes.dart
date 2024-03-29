@@ -1,4 +1,5 @@
 class AppPadding {
+  static const double p5 = 5;
   static const double p8 = 8;
   static const double p10 = 10;
 
@@ -35,5 +36,5 @@ class AppStrings {
 }
 
 class AppAspectRatio {
-  static const double itemListView = 2.7 / 4;
+  static const double itemListView = 2.6 / 4;
 }
