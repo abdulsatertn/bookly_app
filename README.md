@@ -50,6 +50,7 @@ TODO
 - font_awesome_flutter
 - google_fonts
 - go_router
+- equatable
 
 ## Contributing
 
