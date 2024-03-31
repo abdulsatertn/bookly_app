@@ -52,6 +52,7 @@ TODO
 - go_router
 - equatable
 - dartz
+- Dio
 
 ## Contributing
 
