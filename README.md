@@ -53,6 +53,7 @@ TODO
 - equatable
 - dartz
 - Dio
+- bloc
 
 ## Contributing
 
