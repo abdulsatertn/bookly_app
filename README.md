@@ -51,6 +51,7 @@ TODO
 - google_fonts
 - go_router
 - equatable
+- dartz
 
 ## Contributing
 
