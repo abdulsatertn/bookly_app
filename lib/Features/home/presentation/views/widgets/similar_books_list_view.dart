@@ -14,7 +14,10 @@ class SimilarBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(horizontal: AppPadding.p5),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                imageUrl:
+                    'https://pixabay.com/photos/trip-outdoor-summer-vehicle-3351825/',
+              ),
             );
           }),
     );
