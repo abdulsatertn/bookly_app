@@ -26,9 +26,9 @@ class FeaturedBooksListView extends StatelessWidget {
                     padding:
                         const EdgeInsets.symmetric(horizontal: AppPadding.p8),
                     child: CustomBookImage(
-                        imageUrl: 'https://via.placeholder.com/200'
-                        // state.books[index].volumeInfo.imageLinks.thumbnail,
-                        ),
+                      imageUrl:
+                          state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   );
                 }),
           );

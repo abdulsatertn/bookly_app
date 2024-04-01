@@ -19,4 +19,11 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
       (books) => emit(NewestBooksSuccess(books)),
     );
   }
+
+  @override
+  void onChange(Change<NewestBooksState> change) {
+    // TODO: implement onChange
+    super.onChange(change);
+    print(change);
+  }
 }
