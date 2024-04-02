@@ -20,12 +20,12 @@ class VolumeInfo extends Equatable {
   final bool? allowAnonLogging;
   final String? contentVersion;
   final PanelizationSummary? panelizationSummary;
-  final ImageLinks imageLinks;
+  final ImageLinks? imageLinks;
   final String? language;
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
-  final int? averageRating;
+  final double? averageRating;
   final int? ratingsCount;
 
   const VolumeInfo({
@@ -75,13 +75,17 @@ class VolumeInfo extends Equatable {
             ? null
             : PanelizationSummary.fromJson(
                 json['panelizationSummary'] as Map<String, dynamic>),
-        imageLinks:
-            ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+        imageLinks: json['imageLinks'] == null
+            ? null
+            : ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
         language: json['language'] as String?,
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
         canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
-        averageRating: json['averageRating'] as int?,
+        averageRating: json['averageRating'] is double
+            ? json['averageRating']
+            : (json['averageRating'] as int?)?.toDouble(),
+        // i did it becuse the average count is int sonetimes and double sometimes ..sometimes null .... or i can defind it i the top as num
         ratingsCount: json['ratingsCount'] as int?,
       );
 
