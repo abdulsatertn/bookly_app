@@ -22,7 +22,6 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
 
   @override
   void onChange(Change<NewestBooksState> change) {
-    // TODO: implement onChange
     super.onChange(change);
     print(change);
   }

@@ -25,7 +25,7 @@ class VolumeInfo extends Equatable {
   final String? previewLink;
   final String? infoLink;
   final String? canonicalVolumeLink;
-  final double? averageRating;
+  final int? averageRating;
   final int? ratingsCount;
 
   const VolumeInfo({
@@ -81,7 +81,7 @@ class VolumeInfo extends Equatable {
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
         canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
-        averageRating: json['averageRating'] as double?,
+        averageRating: json['averageRating'] as int?,
         ratingsCount: json['ratingsCount'] as int?,
       );
 
