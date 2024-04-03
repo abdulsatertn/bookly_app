@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/constants_classes.dart';
 import '../../../../../core/utils/styles.dart';
 
