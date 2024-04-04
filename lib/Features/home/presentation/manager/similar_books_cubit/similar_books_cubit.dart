@@ -3,7 +3,7 @@ import 'package:bookly_app/Features/home/data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../../data/models/book_model/book_model.dart';
+import '../../../../../core/models/book_model/book_model.dart';
 
 part 'similar_books_state.dart';
 
