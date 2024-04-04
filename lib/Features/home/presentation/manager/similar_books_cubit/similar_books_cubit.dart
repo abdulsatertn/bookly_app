@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly_app/Features/home/data/repos/home_repo.dart';
-import 'package:bookly_app/Features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
