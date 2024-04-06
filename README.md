@@ -5,9 +5,9 @@
 Bookly is a Flutter app that allows users to explore a curated list of free books sourced from the Google Books API. Users can browse the available books and select any book to preview its content.
 
 ## Screenshots
-![bookly5](https://github.com/abdulsatertn/bookly_app/assets/114252885/e7c18859-9edb-4938-85bd-169d68b15a86)
-![bookly1](https://github.com/abdulsatertn/bookly_app/assets/114252885/f266f159-cbad-4268-8bc0-c940fc0dd9d0)
-![bookly2](https://github.com/abdulsatertn/bookly_app/assets/114252885/ec2f70fc-e38b-494d-a5bc-9b585d35d00a)
+![bookly5](https://github.com/abdulsatertn/bookly_app/assets/114252885/e7c18859-9edb-4938-85bd-169d68b15a86| width=100)
+![bookly1](https://github.com/abdulsatertn/bookly_app/assets/114252885/f266f159-cbad-4268-8bc0-c940fc0dd9d0| width=100)
+![bookly2](https://github.com/abdulsatertn/bookly_app/assets/114252885/ec2f70fc-e38b-494d-a5bc-9b585d35d00a| width=100)
 ![bookly 3](https://github.com/abdulsatertn/bookly_app/assets/114252885/81090d18-a194-4e3d-b16c-6a13333898fb)
 ![bookly4](https://github.com/abdulsatertn/bookly_app/assets/114252885/58d48a39-4068-486e-8681-d95b7a621110)
 
