@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 import 'package:bookly_app/Features/search/presentation/manager/cubits/search_cubit/search_cubit.dart';
 import 'package:bookly_app/core/utils/constants_classes.dart';
 import 'package:bookly_app/core/widgets/custom_error_widget.dart';
@@ -10,22 +11,23 @@ class SearchResultsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final searchCubit = BlocProvider.of<SearchCubit>(context);
     return BlocBuilder<SearchCubit, SearchState>(
       builder: (context, state) {
         if (state is SearchInitial) {
-          return const Center(child: Text('Search for books'));
+          return const Center(child: Text('Search for any book'));
         }
         if (state is SearchSuccess) {
           return ListView.builder(
               padding: EdgeInsets.zero,
               itemCount: state.book.length,
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.symmetric(vertical: AppPadding.p10),
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: AppPadding.p10),
                   // child: BookListViewItem(),
 
-                  child: Text('data'),
+                  child: BookListViewItem(
+                    bookModel: state.book[index],
+                  ),
                 );
               });
         } else if (state is SearchLoading) {

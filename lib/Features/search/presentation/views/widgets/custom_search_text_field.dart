@@ -8,6 +8,7 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: onSubmitted,
       decoration: InputDecoration(
         focusedBorder: buildOutLineInputBorder(),
         enabledBorder: buildOutLineInputBorder(),
