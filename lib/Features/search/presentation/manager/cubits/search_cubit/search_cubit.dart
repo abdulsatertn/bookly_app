@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly_app/Features/search/data/repos/search_repo.dart';
-import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:equatable/equatable.dart';
 
@@ -12,7 +11,7 @@ class SearchCubit extends Cubit<SearchState> {
   final SearchRepo searchRepo;
   final String searchWord;
 
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchSearchBooks(String searchWord) async {
     emit(SearchLoading());
     var result =
         await searchRepo.fetchSearchResultBooks(searchWord: searchWord);

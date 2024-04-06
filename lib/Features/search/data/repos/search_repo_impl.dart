@@ -7,9 +7,11 @@ import 'package:dio/dio.dart';
 
 class SearchRepoImpl extends SearchRepo {
   final ApiService apiService;
-  final String searchWord;
 
-  SearchRepoImpl(this.apiService, this.searchWord);
+  SearchRepoImpl(this.apiService);
+  // final String searchWord;
+
+  // SearchRepoImpl(this.apiService, this.searchWord);
   @override
   Future<Either<Failure, List<BookModel>>> fetchSearchResultBooks(
       {required String searchWord}) async {

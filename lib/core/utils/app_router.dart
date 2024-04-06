@@ -36,28 +36,27 @@ abstract class AppRouter {
         ),
       ),
 
-      GoRoute(
-        path: kSearchView,
-        builder: (context, state) {
-          String searchWord = ''; // Get user input dynamically
-          return BlocProvider(
-            create: (context) => SearchCubit(
-              getIt.get<SearchRepoImpl>(),
-              searchWord,
-            ),
-            child: const SearchView(),
-          );
-        },
-      ),
-
       // GoRoute(
       //   path: kSearchView,
-      //   builder: (context, state) => BlocProvider(
-      //     create: (context) =>
-      //         SearchCubit(getIt.get<SearchRepoImpl>(), 'searchKeyword'),
-      //     child: const SearchView(),
-      //   )
+      //   builder: (context, state) {
+      //     String searchWord = ''; // Get user input dynamically
+      //     return BlocProvider(
+      //       create: (context) => SearchCubit(
+      //         getIt.get<SearchRepoImpl>(),
+      //         searchWord,
+      //       ),
+      //       child: const SearchView(),
+      //     );
+      //   },
       // ),
+
+      GoRoute(
+          path: kSearchView,
+          builder: (context, state) => BlocProvider(
+                create: (context) =>
+                    SearchCubit(getIt.get<SearchRepoImpl>(), 'searchKeyword'),
+                child: const SearchView(),
+              )),
     ],
   );
 }

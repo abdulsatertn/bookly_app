@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/home/data/repos/home_repo.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 part 'newest_books_state.dart';
 
@@ -23,6 +24,8 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
   @override
   void onChange(Change<NewestBooksState> change) {
     super.onChange(change);
-    print(change);
+    if (kDebugMode) {
+      print(change);
+    }
   }
 }
