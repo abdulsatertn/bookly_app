@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:bookly_app/Features/search/data/repos/search_repo.dart';
 import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 part 'search_state.dart';
 
@@ -20,5 +21,13 @@ class SearchCubit extends Cubit<SearchState> {
       (failure) => emit(SearchFailure(failure.errorMessage)),
       (books) => emit(SearchSuccess(book: books)),
     );
+  }
+
+  @override
+  void onChange(Change<SearchState> change) {
+    super.onChange(change);
+    if (kDebugMode) {
+      print(change);
+    }
   }
 }

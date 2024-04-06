@@ -10,6 +10,7 @@ class SearchResultsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final searchCubit = BlocProvider.of<SearchCubit>(context);
     return BlocBuilder<SearchCubit, SearchState>(
       builder: (context, state) {
         if (state is SearchInitial) {
